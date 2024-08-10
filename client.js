@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         // Get the div id; chatbox where the response data will be displayed
-        const chatbox = document.getElementById('chatbox');
+        const chatbox = document.querySelector('.block');
         const responseElement = document.createElement('p');
         responseElement.innerHTML = marked.parse(`**${model}**: ` + response);
         chatbox.appendChild(responseElement);
@@ -64,6 +64,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Clear chatbox
     document.getElementById('clearbtn').addEventListener('click', () => {
-        document.getElementById('chatbox').innerHTML = '';
+        document.querySelector('.block').innerHTML = '';
     });
 });

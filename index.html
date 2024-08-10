@@ -3,13 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <title>GPT-4 app</title>
 </head>
 <body>
     <script src="client.js" type="module"></script>
-    <h1>Chat with GPT-4</h1>
-    <div id="selectionModelsBox">
-        <label for="model">Select a model:</label>
+    <h1 class="title pt-3 pb-auto   " id="title">Chat with GPT-4</h1>
+    <div class="select pb-6 pl-4 pr-4" id="selectionModelsBox">
+        <label id="label" for="model">Select a model:</label>
         <select id="model">
             <option value="gpt-4o-2024-08-06">GPT-4o - Dumb but advanced chat tasks</option>
             <option value="gpt-4o-mini">GPT-4o Mini - Fast for quick answers and cheap</option>
@@ -17,16 +21,17 @@
             <option value="gpt-4-turbo-preview">GPT-4 Turbo - Fast and expensive</option>
             <option value="gpt-4">GPT-4 - Big daddy model</option>
         </select>
-        <br>
-        <br>
     </div>
 
-    <div id="textbox">
-        <input type="text" id="inputPrompt" placeholder="Ask me anything or /help for quick help">
-        <button id="sendbtn">Send</button>
-        <button id="clearbtn">Clear</button>
+    <div class="pt-5 pl-4 pr-4" id="textbox">
+        <input class="input is-primary" type="text" id="inputPrompt" placeholder="Ask me anything or /help for quick help">
     </div>
-    <div id="chatbox">
+    <div class="pt-3 pl-4 pr-4" id="button">
+        <button class="button" id="sendbtn">Send</button>
+        <button class="button" id="clearbtn">Clear</button>
+    </div>
+    
+    <div class="block pt-3 pl-4 pr-4">
         <!-- data goes here -->
     </div>
 </body>
