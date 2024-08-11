@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <!-- link rel="preconnect" href="https://fonts.googleapis.com" -->
+    <!-- link rel="preconnect" href="https://fonts.gstatic.com" crossorigin -->
+    <!-- link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet" -->
     <link rel="stylesheet" href="style.css">
     <title>GPT-4 app</title>
 </head>
 <body>
     <script src="client.js" type="module"></script>
-    <h1 class="title pt-3 pb-auto   " id="title">Chat with GPT-4</h1>
-    <div class="select pb-6 pl-4 pr-4" id="selectionModelsBox">
+    <h1 class="title mt-3 mb-auto" id="title">Chat with GPT-4</h1>
+    <div class="select mb-3 ml-4 mr-4" id="selectionModelsBox">
         <label id="label" for="model">Select a model:</label>
         <select id="model">
             <option value="gpt-4o-2024-08-06">GPT-4o - Dumb but advanced chat tasks</option>
@@ -23,15 +23,20 @@
         </select>
     </div>
 
-    <div class="pt-5 pl-4 pr-4" id="textbox">
-        <input class="input is-primary" type="text" id="inputPrompt" placeholder="Ask me anything or /help for quick help">
-    </div>
-    <div class="pt-3 pl-4 pr-4" id="button">
-        <button class="button" id="sendbtn">Send</button>
-        <button class="button" id="clearbtn">Clear</button>
+    <div class="chatcontrolsarea">
+        <div class="control mt-5 ml-4 mr-4" id="promptbox">
+            <textarea
+                class="textarea has-fixed-size is-primary" id="inputPrompt" 
+                placeholder="Ask me anything or /help for quick help"
+                rows="3"></textarea>
+        </div>
+        <div class="mt-3 ml-4 mr-4" id="button">
+            <button class="button" id="sendbtn">Send</button>
+            <button class="button" id="clearbtn">Clear</button>
+        </div>
     </div>
     
-    <div class="block pt-3 pl-4 pr-4">
+    <div class="block mt-3 ml-4 mr-4" id="history">
         <!-- data goes here -->
     </div>
 </body>

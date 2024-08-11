@@ -3,3 +3,8 @@
 #title {
     text-align: center;
 }
+
+#history {
+    display: flex;
+    flex-direction: column-reverse;
+}
