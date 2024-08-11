@@ -1,4 +1,5 @@
 import express from 'express'
+import cors from 'cors'
 import openai from 'openai'
 import 'dotenv/config'
 
@@ -6,6 +7,7 @@ import 'dotenv/config'
 const app = express()
 const port = 15032
 
+app.use(cors())
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
