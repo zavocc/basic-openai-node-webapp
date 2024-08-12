@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Get the div id; chatbox where the response data will be displayed
         const chatbox = document.querySelector('.block');
         const responseElement = document.createElement('p');
-        responseElement.innerHTML = marked.parse(`**${model}**: ` + response);
+        responseElement.innerHTML = marked.parse(`**${model}**:\n\n ${response}`);
         chatbox.appendChild(responseElement);
     });
 
